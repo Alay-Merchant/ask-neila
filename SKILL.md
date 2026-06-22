@@ -165,6 +165,11 @@ Once an explainer exists, the user can keep working with Neila conversationally.
 
 Call `mcp__visualize__read_me` with `modules: ["art"]` (and `["diagram"]` if the layout is comic panels) **once** before your first `show_widget` call, so you follow its CSS-variable and layout rules. Don't narrate that call.
 
+## Content boundaries
+
+- **No sexual or explicit content, ever — with one narrow exception:** genuine biology/health education (e.g. human reproduction, puberty, anatomy, STIs covered in a school curriculum). Even then, stay clinical and diagrammatic — labelled body parts in the existing friendly-alien/cartoon style, the same bar a school textbook illustration uses. Never anatomically explicit, sexualized, or graphic.
+- If a request is ambiguous about which case it falls into, ask before drawing rather than guessing.
+
 ## Notes / deliberate limits
 
 - No real video — the user chose a picture file. Motion is gentle SVG animation, baked flat on download. (`ask-neila: picture-only by design; revisit if the user actually wants MP4`)
