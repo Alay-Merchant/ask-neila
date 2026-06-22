@@ -37,10 +37,7 @@ Reusable SVG groups for Neila and Pip live in [characters.md](characters.md) —
    - `.pptx` → use the `anthropic-skills:pptx` skill to extract text.
    - Scanned/image-only PDFs and raw images are NOT supported in this version — tell the user plainly if you hit one.
 
-2. **Distill 3–6 concepts.** Find the few ideas that actually matter. For each, write:
-   - a **plain-English one-liner** (no jargon — if a 12-year-old wouldn't get it, rewrite it), and
-   - a **concrete everyday analogy** ("gravity is like the floor pulling a dropped spoon").
-   Fewer, clearer concepts beat cramming everything in. Cap at 6.
+2. **Distill 3–6 concepts so a 10-year-old gets them instantly.** This is the real product — the art only delivers it. **[EXPLAIN.md](EXPLAIN.md) is the standard — follow its six-beat method and run its pre-flight checklist before you draw anything.** In short, each concept gets: an **anchor** to something the kid already knows → a **plain name** (zero unexplained jargon) → the idea **in one concrete breath** → an **analogy that structurally maps** (note where it breaks) → a **tiny picturable example** → **why they'd care**. Run the curse-of-knowledge sweep and the explain-it-back test. Cut mercilessly: 3–4 well-built concepts beat 6 rushed ones. A muddy explanation cannot be rescued by a pretty picture.
 
 3. **Pick the layout from the content** (don't ask):
    - **Comic strip / panels** — for sequential or process content (steps, cause→effect, how-something-works). Neila walks Pip through panel by panel.

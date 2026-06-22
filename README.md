@@ -4,7 +4,19 @@
 
 **ask-neila** is a [Claude Code](https://claude.com/claude-code) skill. Point it at some text and it pulls out the few ideas that actually matter, rewrites each in plain words with a concrete analogy, and draws a single picture you can download — starring **Neila** the alien and her alien dog **Pip**, plus a cast of 100+ topic-themed guests.
 
-The real value is the *simplification*. The aliens are the wrapper that makes it stick.
+The real value is the *simplification*. Neila is built on a strict pedagogy method ([EXPLAIN.md](EXPLAIN.md)) that turns expert jargon into something a 10-year-old explains back to a friend. The aliens are the wrapper that makes it stick.
+
+## Example
+
+**You give it this:**
+
+> "Entropy is a measure of the number of microstates consistent with a given macrostate; the second law of thermodynamics states that the total entropy of an isolated system never decreases over time."
+
+**Neila gives back this** (anchor → plain idea → analogy → why you'd care):
+
+> 🛸 **Neila:** "You know how your room *never* tidies itself, but it gets messy on its own all the time? That's basically a law of the universe. **Entropy** is just a fancy word for 'how mixed-up and spread-out things are.' Left alone, everything drifts from tidy to messy — heat spreads out, smells fill the room, ice melts into a puddle. It can go the other way, but *only if someone does work* (you, tidying). That one-way drift is why time feels like it only goes forwards."
+
+Same fact. One a 10-year-old repeats at dinner; the other they skip. Then it's drawn — Neila pointing at a messy room, Pip knocking over a tower, with the words in a speech bubble.
 
 ## What it does
 
@@ -46,9 +58,10 @@ Then in Claude Code, type `/ask-neila` followed by your text or a file path.
 | file | what it is |
 |------|-----------|
 | [SKILL.md](SKILL.md) | the pipeline Claude follows |
+| [EXPLAIN.md](EXPLAIN.md) | **the pedagogy method — how complex ideas become 10-year-old-simple (the core value)** |
 | [characters.md](characters.md) | reusable SVG for the stars, Neila & Pip |
 | [cast.md](cast.md) | the alien forge + 100+ named guest roster |
-| [QUALITY.md](QUALITY.md) | the world-class rubric every render is held to |
+| [QUALITY.md](QUALITY.md) | the world-class rubric every *render* is held to |
 
 ## Contributing
 
