@@ -3,7 +3,7 @@
 > Point it at a file — or a whole folder — and friendly alien characters explain it in dead-simple language as a colorful illustrated picture. Hand Neila a folder and she maps how the files connect and explains the whole story.
 
 <p align="center">
-  <img src="assets/hero.svg" alt="Neila the alien explains why the sky is blue, in three simple illustrated steps" width="680">
+  <img src="assets/hero.svg" alt="Neila the alien explains compound interest in three simple illustrated steps" width="680">
 </p>
 
 <p align="center"><em>A real ask-neila explainer. You give it a hard topic; Neila gives back this.</em></p>
@@ -16,13 +16,13 @@ The real value is the *simplification*. Neila is built on a strict pedagogy meth
 
 **You give it this:**
 
-> "Entropy is a measure of the number of microstates consistent with a given macrostate; the second law of thermodynamics states that the total entropy of an isolated system never decreases over time."
+> "Compound interest is the addition of interest to the principal sum of a deposit, so that interest in subsequent periods is earned on the accumulated interest of prior periods, formally A = P(1 + r/n)^(nt)."
 
 **Neila gives back this** (anchor → plain idea → analogy → why you'd care):
 
-> 🛸 **Neila:** "You know how your room *never* tidies itself, but it gets messy on its own all the time? That's basically a law of the universe. **Entropy** is just a fancy word for 'how mixed-up and spread-out things are.' Left alone, everything drifts from tidy to messy — heat spreads out, smells fill the room, ice melts into a puddle. It can go the other way, but *only if someone does work* (you, tidying). That one-way drift is why time feels like it only goes forwards."
+> 🛸 **Neila:** "You know how a snowball gets bigger as it rolls down a hill — and the bigger it gets, the *faster* it grows? Money can do that. The bank pays you a little extra just for keeping your money there (that's **interest**). The clever bit: next year you earn extra on the extra too, so the pile grows itself. Give it enough time and a small sum snowballs into a fortune — £100 can quietly become over £1,000. That's why people say the best time to start saving was years ago."
 
-Same fact. One a 10-year-old repeats at dinner; the other they skip. Then it's drawn — Neila pointing at a messy room, Pip knocking over a tower, with the words in a speech bubble.
+Same fact. One a 10-year-old repeats at dinner; the other they skip. Then it's drawn — exactly the picture above.
 
 ## What it does
 

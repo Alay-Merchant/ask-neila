@@ -1,68 +1,64 @@
 <svg width="680" height="576" viewBox="0 0 680 576" role="img" xmlns="http://www.w3.org/2000/svg">
-<title>Neila the alien explains why the sky is blue</title>
-<desc>A three-step illustrated explainer: sunlight is every colour, air scatters the blue, so blue reaches your eyes from everywhere and the sky looks blue.</desc>
+<title>Neila the alien explains compound interest</title>
+<desc>A three-step illustrated explainer: the bank pays you interest, your interest earns its own interest, and over time the money snowballs into a fortune.</desc>
 <defs>
 <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
 <style>@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&amp;display=swap');.f{font-family:'Fredoka','Comic Sans MS',sans-serif}</style>
 </defs>
 
-<rect x="0" y="0" width="680" height="576" fill="#CFE8FF"/>
+<rect x="0" y="0" width="680" height="576" fill="#EAF6EC"/>
 
-<g opacity="0.95" fill="#FFFFFF"><ellipse cx="602" cy="250" rx="32" ry="17"/><circle cx="585" cy="247" r="15"/><circle cx="607" cy="240" r="19"/><circle cx="624" cy="249" r="13"/></g>
-<g opacity="0.9" fill="#FFFFFF"><ellipse cx="585" cy="446" rx="28" ry="15"/><circle cx="571" cy="443" r="13"/><circle cx="590" cy="437" r="16"/><circle cx="604" cy="445" r="11"/></g>
+<g><circle cx="602" cy="250" r="18" fill="#FFD23F" stroke="#C9962A" stroke-width="2.5"/><text class="f" x="602" y="256" font-size="16" font-weight="600" fill="#8A6410" text-anchor="middle">£</text><animateTransform attributeName="transform" type="translate" values="0 0;0 -5;0 0" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" dur="3.4s" repeatCount="indefinite"/></g>
+<g><circle cx="582" cy="444" r="14" fill="#FFD23F" stroke="#C9962A" stroke-width="2.5"/><text class="f" x="582" y="449" font-size="13" font-weight="600" fill="#8A6410" text-anchor="middle">£</text><animateTransform attributeName="transform" type="translate" values="0 0;0 -4;0 0" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" dur="3.8s" begin="0.8s" repeatCount="indefinite"/></g>
 
 <g transform="translate(626,56)">
-  <g><line x1="0" y1="-40" x2="0" y2="-30" stroke="#F2B705" stroke-width="4" stroke-linecap="round"/><line x1="28" y1="-28" x2="21" y2="-21" stroke="#F2B705" stroke-width="4" stroke-linecap="round"/><line x1="40" y1="0" x2="30" y2="0" stroke="#F2B705" stroke-width="4" stroke-linecap="round"/><line x1="28" y1="28" x2="21" y2="21" stroke="#F2B705" stroke-width="4" stroke-linecap="round"/><line x1="0" y1="40" x2="0" y2="30" stroke="#F2B705" stroke-width="4" stroke-linecap="round"/><line x1="-28" y1="28" x2="-21" y2="21" stroke="#F2B705" stroke-width="4" stroke-linecap="round"/><line x1="-40" y1="0" x2="-30" y2="0" stroke="#F2B705" stroke-width="4" stroke-linecap="round"/><line x1="-28" y1="-28" x2="-21" y2="-21" stroke="#F2B705" stroke-width="4" stroke-linecap="round"/><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="60s" repeatCount="indefinite"/></g>
-  <circle cx="0" cy="0" r="23" fill="#FFD23F" stroke="#E0A21A" stroke-width="3"/>
+  <circle cx="0" cy="0" r="24" fill="#FFD23F" stroke="#C9962A" stroke-width="3"/>
+  <text class="f" x="0" y="8" font-size="24" font-weight="600" fill="#8A6410" text-anchor="middle">£</text>
+  <animateTransform attributeName="transform" type="translate" values="626 56;626 50;626 56" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" dur="3s" repeatCount="indefinite"/>
 </g>
 
-<text class="f" x="34" y="52" font-size="30" font-weight="600" fill="#13324A">Why is the sky blue?</text>
-<text class="f" x="34" y="80" font-size="14" font-weight="400" fill="#39596F">Neila explains it so a 10-year-old gets it</text>
+<text class="f" x="34" y="52" font-size="28" font-weight="600" fill="#14402A">What is compound interest?</text>
+<text class="f" x="34" y="80" font-size="14" font-weight="400" fill="#3E6B54">The most powerful idea in money — made simple</text>
 
 <g transform="translate(30,114)">
-  <rect x="0" y="0" width="448" height="116" rx="16" fill="#FFFDF5" stroke="#13324A" stroke-width="3"/>
-  <circle cx="38" cy="40" r="17" fill="#FF8FB1" stroke="#13324A" stroke-width="2"/>
-  <text class="f" x="38" y="46" font-size="18" font-weight="600" fill="#13324A" text-anchor="middle">1</text>
-  <circle cx="120" cy="62" r="14" fill="#FFFFFF" stroke="#13324A" stroke-width="2"/>
-  <line x1="135" y1="48" x2="180" y2="36" stroke="#FF5C5C" stroke-width="4" stroke-linecap="round"/>
-  <line x1="136" y1="55" x2="182" y2="50" stroke="#FF9F3C" stroke-width="4" stroke-linecap="round"/>
-  <line x1="136" y1="62" x2="184" y2="62" stroke="#FFD23F" stroke-width="4" stroke-linecap="round"/>
-  <line x1="136" y1="69" x2="182" y2="74" stroke="#6BCB77" stroke-width="4" stroke-linecap="round"/>
-  <line x1="135" y1="76" x2="180" y2="88" stroke="#4D9BE6" stroke-width="4" stroke-linecap="round"/>
-  <text class="f" x="208" y="46" font-size="17" font-weight="600" fill="#13324A">Sunlight is every colour</text>
-  <text class="f" x="208" y="72" font-size="13" font-weight="400" fill="#39596F">White light is really a whole rainbow</text>
-  <text class="f" x="208" y="91" font-size="13" font-weight="400" fill="#39596F">squished together.</text>
+  <rect x="0" y="0" width="448" height="116" rx="16" fill="#FFFFFF" stroke="#14402A" stroke-width="3"/>
+  <circle cx="38" cy="40" r="17" fill="#FFD23F" stroke="#14402A" stroke-width="2"/>
+  <text class="f" x="38" y="46" font-size="18" font-weight="600" fill="#5A4410" text-anchor="middle">1</text>
+  <circle cx="113" cy="64" r="16" fill="#FFD23F" stroke="#C9962A" stroke-width="2"/>
+  <text class="f" x="113" y="70" font-size="16" font-weight="600" fill="#8A6410" text-anchor="middle">£</text>
+  <path d="M133 56 L150 42" fill="none" stroke="#2E9E5E" stroke-width="2.5" marker-end="url(#ah)"/>
+  <circle cx="160" cy="38" r="9" fill="#FFD23F" stroke="#C9962A" stroke-width="2"/>
+  <text class="f" x="160" y="42" font-size="10" font-weight="600" fill="#8A6410" text-anchor="middle">£</text>
+  <text class="f" x="208" y="46" font-size="17" font-weight="600" fill="#14402A">The bank pays you to wait</text>
+  <text class="f" x="208" y="72" font-size="13" font-weight="400" fill="#3E6B54">Leave money in the bank and it slowly</text>
+  <text class="f" x="208" y="91" font-size="13" font-weight="400" fill="#3E6B54">earns a little extra — that's interest.</text>
 </g>
 
 <g transform="translate(30,246)">
-  <rect x="0" y="0" width="448" height="116" rx="16" fill="#FFFDF5" stroke="#13324A" stroke-width="3"/>
-  <circle cx="38" cy="40" r="17" fill="#6BCB77" stroke="#13324A" stroke-width="2"/>
-  <text class="f" x="38" y="46" font-size="18" font-weight="600" fill="#13324A" text-anchor="middle">2</text>
-  <circle cx="100" cy="44" r="3" fill="#9FB8C9"/><circle cx="168" cy="48" r="3" fill="#9FB8C9"/><circle cx="104" cy="82" r="3" fill="#9FB8C9"/><circle cx="170" cy="80" r="3" fill="#9FB8C9"/>
-  <path d="M132 62 Q112 44 100 48" fill="none" stroke="#2A6BB0" stroke-width="2.5" marker-end="url(#ah)"/>
-  <path d="M132 62 Q156 44 168 50" fill="none" stroke="#2A6BB0" stroke-width="2.5" marker-end="url(#ah)"/>
-  <path d="M132 62 Q150 82 168 78" fill="none" stroke="#2A6BB0" stroke-width="2.5" marker-end="url(#ah)"/>
-  <circle cx="132" cy="62" r="12" fill="#4D9BE6" stroke="#13324A" stroke-width="2"/>
-  <circle cx="128" cy="58" r="3" fill="#BFE0FF"/>
-  <text class="f" x="208" y="46" font-size="17" font-weight="600" fill="#13324A">Air scatters the blue</text>
-  <text class="f" x="208" y="72" font-size="13" font-weight="400" fill="#39596F">Blue light is bouncy, so the air flings</text>
-  <text class="f" x="208" y="91" font-size="13" font-weight="400" fill="#39596F">it all across the sky.</text>
+  <rect x="0" y="0" width="448" height="116" rx="16" fill="#FFFFFF" stroke="#14402A" stroke-width="3"/>
+  <circle cx="38" cy="40" r="17" fill="#7FD0A0" stroke="#14402A" stroke-width="2"/>
+  <text class="f" x="38" y="46" font-size="18" font-weight="600" fill="#14402A" text-anchor="middle">2</text>
+  <path d="M92 88 Q130 96 180 60" fill="none" stroke="#2E9E5E" stroke-width="2.5" marker-end="url(#ah)"/>
+  <circle cx="100" cy="78" r="8" fill="#FFD23F" stroke="#C9962A" stroke-width="2"/>
+  <circle cx="130" cy="68" r="12" fill="#FFD23F" stroke="#C9962A" stroke-width="2"/>
+  <circle cx="168" cy="56" r="17" fill="#FFD23F" stroke="#C9962A" stroke-width="2"/>
+  <text class="f" x="168" y="62" font-size="16" font-weight="600" fill="#8A6410" text-anchor="middle">£</text>
+  <text class="f" x="208" y="46" font-size="17" font-weight="600" fill="#14402A">Interest earns interest</text>
+  <text class="f" x="208" y="72" font-size="13" font-weight="400" fill="#3E6B54">Next year you earn extra on the extra</text>
+  <text class="f" x="208" y="91" font-size="13" font-weight="400" fill="#3E6B54">too — the pile grows itself.</text>
 </g>
 
 <g transform="translate(30,378)">
-  <rect x="0" y="0" width="448" height="116" rx="16" fill="#FFFDF5" stroke="#13324A" stroke-width="3"/>
-  <circle cx="38" cy="40" r="17" fill="#6EC6FF" stroke="#13324A" stroke-width="2"/>
-  <text class="f" x="38" y="46" font-size="18" font-weight="600" fill="#13324A" text-anchor="middle">3</text>
-  <path d="M82 46 L112 56" fill="none" stroke="#2A6BB0" stroke-width="2.5" marker-end="url(#ah)"/>
-  <path d="M84 82 L112 70" fill="none" stroke="#2A6BB0" stroke-width="2.5" marker-end="url(#ah)"/>
-  <path d="M134 34 L134 48" fill="none" stroke="#2A6BB0" stroke-width="2.5" marker-end="url(#ah)"/>
-  <ellipse cx="138" cy="64" rx="22" ry="14" fill="#FFFFFF" stroke="#13324A" stroke-width="2"/>
-  <circle cx="138" cy="64" r="9" fill="#4D9BE6"/>
-  <circle cx="138" cy="64" r="4" fill="#13324A"/>
-  <circle cx="141" cy="61" r="1.6" fill="#FFFFFF"/>
-  <text class="f" x="208" y="46" font-size="17" font-weight="600" fill="#13324A">Blue comes from everywhere</text>
-  <text class="f" x="208" y="72" font-size="13" font-weight="400" fill="#39596F">Your eyes catch blue from every</text>
-  <text class="f" x="208" y="91" font-size="13" font-weight="400" fill="#39596F">direction — so the sky looks blue.</text>
+  <rect x="0" y="0" width="448" height="116" rx="16" fill="#FFFFFF" stroke="#14402A" stroke-width="3"/>
+  <circle cx="38" cy="40" r="17" fill="#FFB454" stroke="#14402A" stroke-width="2"/>
+  <text class="f" x="38" y="46" font-size="18" font-weight="600" fill="#5A4410" text-anchor="middle">3</text>
+  <path d="M96 92 C124 86 152 70 188 40" fill="none" stroke="#2E9E5E" stroke-width="3" marker-end="url(#ah)"/>
+  <circle cx="96" cy="92" r="6" fill="#FFD23F" stroke="#C9962A" stroke-width="1.5"/>
+  <circle cx="178" cy="52" r="8" fill="#FFD23F" stroke="#C9962A" stroke-width="2"/>
+  <circle cx="184" cy="44" r="8" fill="#FFD23F" stroke="#C9962A" stroke-width="2"/>
+  <text class="f" x="208" y="46" font-size="17" font-weight="600" fill="#14402A">Time makes it explode</text>
+  <text class="f" x="208" y="72" font-size="13" font-weight="400" fill="#3E6B54">Wait long enough and a small sum</text>
+  <text class="f" x="208" y="91" font-size="13" font-weight="400" fill="#3E6B54">snowballs into a small fortune.</text>
 </g>
 
 <g transform="translate(498,108) scale(0.95)">
@@ -98,11 +94,11 @@
   <rect x="60" y="70" width="8" height="12" rx="4" fill="#9B7FD4"/>
   <path d="M78 50 Q92 44 90 32" stroke="#9B7FD4" stroke-width="6" fill="none" stroke-linecap="round"><animateTransform attributeName="transform" type="rotate" values="-8 78 50;10 78 50;-8 78 50" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" dur="1.2s" repeatCount="indefinite"/></path>
   <ellipse cx="42" cy="44" rx="16" ry="16" fill="#fff" stroke="#9B7FD4" stroke-width="3"><animate attributeName="ry" values="16;16;2;16;16" keyTimes="0;0.9;0.93;0.96;1" dur="5s" repeatCount="indefinite"/></ellipse>
-  <circle cx="44" cy="46" r="7" fill="#1A1A2E"/>
-  <circle cx="47" cy="43" r="2.5" fill="#fff"/>
+  <circle cx="44" cy="45" r="8" fill="#1A1A2E"/>
+  <circle cx="47" cy="42" r="2.6" fill="#fff"/>
   <path d="M34 64 Q42 72 50 64" stroke="#1A1A2E" stroke-width="3" fill="none" stroke-linecap="round"/>
 </g>
 
-<rect x="30" y="510" width="616" height="44" rx="14" fill="#FFE7A0" stroke="#13324A" stroke-width="3"/>
-<text class="f" x="338" y="538" font-size="13.5" font-weight="500" fill="#7A5A12" text-anchor="middle">Fun fact: sunsets glow red because by then the blue light has scattered away.</text>
+<rect x="30" y="510" width="616" height="44" rx="14" fill="#FFE7A0" stroke="#14402A" stroke-width="3"/>
+<text class="f" x="338" y="538" font-size="13.5" font-weight="500" fill="#7A5A12" text-anchor="middle">Fun fact: £100 left to grow at 8% a year becomes over £1,000 in 30 years — adding nothing.</text>
 </svg>
