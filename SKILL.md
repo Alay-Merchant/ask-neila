@@ -86,9 +86,9 @@ A picture is worth drawing once, not every time at full cost. Default to the che
    - Motion: eased (keySplines), staggered, seamless loops, ≤3 movers, calm — and the frozen frame must look composed too.
    - Neila hosts every picture; Pip appears and reacts in every picture; one guest per concept acts it out.
 
-5. **Render + deliver.** Call `mcp__visualize__show_widget`:
-   - `title`: a specific snake_case name of the topic (this becomes the download filename, e.g. `photosynthesis_explained`).
-   - The widget renders inline and gives the user a **download button** → that's their picture file.
+5. **Render + deliver.** See [Rendering](#rendering--works-in-claude-code-and-claudeai-chat) for the platform-specific step. Either way:
+   - Give it a specific topic-based name (e.g. `photosynthesis_explained`) — the `show_widget` title, or the artifact's implied filename.
+   - The user gets a downloadable picture file either way.
    - Briefly, in text, also list the concepts + analogies so they have the words even without the image.
 
 6. **Export an AI-readable markdown twin** (when `--md` is passed, or offer it otherwise). Write the explanation as a structured `.md` file next to the source (or to a path the user gives) named `<topic>-explained.md`. This is the picture's text twin: it lets *other AI models* ingest the simplified concepts, not just humans. Use exactly this structure so it parses cleanly:
@@ -161,9 +161,13 @@ Once an explainer exists, the user can keep working with Neila conversationally.
 
 - **Alternative analogies** — "that didn't click?" → offer **two** more analogies for the same concept, each from a *different* domain (e.g. sport, cooking, money, video games), so at least one connects. Note where each breaks if it matters.
 
-## Before drawing, read the visualize guide
+## Rendering — works in Claude Code AND claude.ai chat
 
-Call `mcp__visualize__read_me` with `modules: ["art"]` (and `["diagram"]` if the layout is comic panels) **once** before your first `show_widget` call, so you follow its CSS-variable and layout rules. Don't narrate that call.
+This skill runs the same everywhere; only the render step differs by platform:
+
+- **Claude Code (this CLI):** call `mcp__visualize__read_me` with `modules: ["art"]` (and `["diagram"]` for comic panels) **once** before your first `show_widget` call, then deliver via `mcp__visualize__show_widget`. Don't narrate the `read_me` call.
+- **claude.ai chat, Desktop, or anywhere without those tools:** skip `read_me`/`show_widget` entirely — just output the finished SVG as a fenced ` ```svg ` code block in your reply. claude.ai turns this into a viewable, downloadable Artifact automatically. [QUALITY.md](QUALITY.md) and [characters.md](characters.md)/[cast.md](cast.md) are self-contained (hardcoded hex, no host CSS variables needed), so the picture looks identical either way.
+- **File reading & folder mode:** use whichever file-ingestion the platform gives you — Claude Code's named skills (`pdf`/`pptx`/`xlsx`) if present, or just read an attached/uploaded file directly if the platform already extracted it into context (claude.ai does this automatically for PDF/DOCX/PPTX/XLSX/images on upload). The `graphify` skill (folder mode's big-folder path) is Claude Code-only — if it's not available, just use the in-context connection-map method regardless of folder size.
 
 ## Content boundaries
 
