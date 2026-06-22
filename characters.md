@@ -86,9 +86,9 @@ Lavender, one big eye, two floppy antenna-ears, tail, four legs. ~90×80 at scal
 <g transform="translate(0,0)">
   <rect x="0" y="0" width="240" height="90" rx="18" fill="#FFFDF5" stroke="#1A1A2E" stroke-width="3"/>
   <path d="M30 88 L20 112 L52 88 Z" fill="#FFFDF5" stroke="#1A1A2E" stroke-width="3"/>
-  <text x="120" y="38" font-family="'Comic Sans MS','Baloo 2',sans-serif" font-size="17"
-        font-weight="700" fill="#1A1A2E" text-anchor="middle">
-    <tspan x="120" dy="0">CONCEPT NAME</tspan>
+  <text x="120" y="36" font-family="'Fredoka','Comic Sans MS',sans-serif" font-size="16"
+        font-weight="600" fill="#1A1A2E" text-anchor="middle">
+    <tspan x="120" dy="0">Concept name</tspan>
     <tspan x="120" dy="24" font-size="14" font-weight="400">plain one-liner here</tspan>
   </text>
 </g>

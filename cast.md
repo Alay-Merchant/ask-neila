@@ -103,7 +103,7 @@ Antennae tips, accents, cheeks reuse the shared `#FFD23F` / `#FF8FB1` / ink `#1A
 | Mox | B3/E4/A3/L2 + puzzle-piece, grape | problem solving, logic |
 | Pell | B6/E2/A1/L1 + seedling, moss | growth, biology |
 | Snik | B5/E5/A6/L3 + magnet, cobalt | attraction, forces |
-| Юра (Yura) | B2/E2/A2/L1 + flag, ruby | history, milestones |
+| Eon | B2/E2/A2/L1 + flag, ruby | history, milestones |
 | Cobb | B1/E2/A5/L1 + abacus, amber | counting, arithmetic |
 | Hux | B4/E3/A1/L2 + compass, seafoam | direction, choices |
 | Volt | B6/E1/A6/L4 + battery, sunflower | electricity, power |
@@ -134,6 +134,21 @@ Antennae tips, accents, cheeks reuse the shared `#FFD23F` / `#FF8FB1` / ink `#1A
 | Echo | B2/E2/A4/L1 + drum, seafoam | repetition, feedback loops |
 | Numo | B6/E5/A1/L2 + abacus, amber | big numbers, statistics |
 | Wisp | B3/E1/A5/L5 + hourglass, bubblegum | gases, evaporation |
+| Klu | B2/E2/A1/L1 + key, cobalt | codes, encryption, secrets |
+| Fath | B5/E2/A5/L1 + balance-scale, seafoam | economics, supply & demand |
+| Wob | B3/E2/A6/L3 + drum, ruby | resonance, harmonics |
+| Pax | B6/E3/A1/L1 + flag, mint | peace, diplomacy, treaties |
+| Glyph | B7/E2/A2/L1 + book, grape | languages, symbols |
+| Therm | B5/E1/A6/L4 + battery, coral | heat, temperature |
+| Cyto | B1/E1/A5/L5 + seedling, moss | cells, microbiology |
+| Orbix | B8/E5/A3/L5 + telescope, cobalt | orbits, planets |
+| Datu | B6/E4/A1/L2 + abacus, sky | data, databases, tables |
+| Mira | B4/E2/A2/L1 + magnifier, rose | reflection, symmetry |
+| Flux | B3/E2/A6/L3 + arrow-sign, tangerine | rates of change |
+| Knot | B5/E4/A3/L2 + puzzle-piece, amber | networks, links |
+| Bloo | B1/E2/A4/L4 + net, sky | probability, chance |
+| Crag | B6/E2/A5/L4 + ruler, moss | geology, rock layers |
+| Hymn | B4/E1/A2/L1 + drum, bubblegum | poetry, rhythm, meter |
 
 ## Roster — Alien Pets (sidekicks, like Pip)
 
@@ -188,4 +203,4 @@ Antennae tips, accents, cheeks reuse the shared `#FFD23F` / `#FF8FB1` / ink `#1A
 
 - `ask-neila: parametric forge over 100 bespoke SVGs — same variety, ~5% of the code. Give a character a hand-drawn signature look only when one actually earns it (a repeat favourite).`
 - Recipes are guidance, not pixels — assemble guests from the Neila/Pip primitives + these parts. Two eyes on a coral blob holding a book is "Memo"; nobody audits the pixels.
-- Need more than 100? The forge multiplies out to thousands (8 bodies × 6 eyes × 6 tops × 5 limbs × 25 props × 14 hues). The roster just names the memorable ones.
+- The named roster is **102** characters (65 aliens + 12 pets + 25 animals). Need more? The forge multiplies out to thousands (8 bodies × 6 eyes × 6 tops × 5 limbs × 25 props × 14 hues). The roster just names the memorable ones.

@@ -2,6 +2,12 @@
 
 > Point it at a file — or a whole folder — and friendly alien characters explain it in dead-simple language as a colorful illustrated picture. Hand Neila a folder and she maps how the files connect and explains the whole story.
 
+<p align="center">
+  <img src="assets/hero.svg" alt="Neila the alien explains why the sky is blue, in three simple illustrated steps" width="680">
+</p>
+
+<p align="center"><em>A real ask-neila explainer. You give it a hard topic; Neila gives back this.</em></p>
+
 **ask-neila** is a [Claude Code](https://claude.com/claude-code) skill. **Its main job is reading your files** — PDFs, slides, spreadsheets, photos, notes — pulling out the few ideas that actually matter, rewriting each in plain words with a concrete analogy, and drawing a single picture you can download. Starring **Neila** the alien and her alien dog **Pip**, plus a cast of 100+ topic-themed guests. Pasted text works too, but files are the point.
 
 The real value is the *simplification*. Neila is built on a strict pedagogy method ([EXPLAIN.md](EXPLAIN.md)) that turns expert jargon into something a 10-year-old explains back to a friend. The aliens are the wrapper that makes it stick.
