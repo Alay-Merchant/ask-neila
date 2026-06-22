@@ -51,6 +51,16 @@ The real value is the **simplification** (plain words + a concrete analogy per c
 
 Reusable SVG groups for Neila and Pip live in [characters.md](characters.md) — paste them in and reposition/recolor expressions rather than redrawing from scratch. This is what keeps the mascots recognizable across pictures. The 100+ guest roster and the mix-and-match part library live in [cast.md](cast.md).
 
+## Keep it cheap
+
+A picture is worth drawing once, not every time at full cost. Default to the cheapest version that still meets [QUALITY.md](QUALITY.md) and [EXPLAIN.md](EXPLAIN.md):
+
+- **3–4 concepts**, not 6, unless the source clearly needs more.
+- **Static by default.** Only add SVG animation if the user asks for motion — it's pure extra output tokens for a picture that's downloaded as a still anyway.
+- **Mini-icon guests for posters/lists** (a circle + 2 eye-dots + one feature, ~10 lines of SVG) instead of full multi-part bodies. Full hand-drawn guest bodies are for comic panels where the guest is actually acting something out.
+- **No filler decoration** (floating coins, sparkles, background clutter) unless it's load-bearing for the concept.
+- **Don't re-read** [characters.md](characters.md), [cast.md](cast.md), [EXPLAIN.md](EXPLAIN.md), [QUALITY.md](QUALITY.md), or call `mcp__visualize__read_me` again if you already loaded them earlier in this same conversation — reuse what you remember.
+
 ## Process
 
 1. **Get the content.** If the path is a **folder**, jump to the [Folder mode](#folder-mode--connect-the-dots-across-files) section below. For a single file or pasted text:
@@ -61,7 +71,7 @@ Reusable SVG groups for Neila and Pip live in [characters.md](characters.md) —
    - `.xlsx` / `.xls` → use the `anthropic-skills:xlsx` skill to read the data. Explain what the sheet *means* (the trends, relationships, what the numbers are telling you), not a cell dump.
    - **Photo / image** (`.png/.jpg/.jpeg/.webp/.gif`) → `Read` the file directly; Claude sees it natively. Works for diagrams, handwritten notes, screenshots, photographed textbook pages, whiteboards. Extract the concepts from what's in the image.
 
-2. **Distill 3–6 concepts so a 10-year-old gets them instantly.** This is the real product — the art only delivers it. **[EXPLAIN.md](EXPLAIN.md) is the standard — follow its six-beat method and run its pre-flight checklist before you draw anything.** In short, each concept gets: an **anchor** to something the kid already knows → a **plain name** (zero unexplained jargon) → the idea **in one concrete breath** → an **analogy that structurally maps** (note where it breaks) → a **tiny picturable example** → **why they'd care**. Run the curse-of-knowledge sweep and the explain-it-back test. Cut mercilessly: 3–4 well-built concepts beat 6 rushed ones. A muddy explanation cannot be rescued by a pretty picture.
+2. **Distill 3–4 concepts (see [Keep it cheap](#keep-it-cheap); up to 6 only if the source clearly needs it) so a 10-year-old gets them instantly.** This is the real product — the art only delivers it. **[EXPLAIN.md](EXPLAIN.md) is the standard — follow its six-beat method and run its pre-flight checklist before you draw anything.** In short, each concept gets: an **anchor** to something the kid already knows → a **plain name** (zero unexplained jargon) → the idea **in one concrete breath** → an **analogy that structurally maps** (note where it breaks) → a **tiny picturable example** → **why they'd care**. Run the curse-of-knowledge sweep and the explain-it-back test. Cut mercilessly: 3–4 well-built concepts beat 6 rushed ones. A muddy explanation cannot be rescued by a pretty picture.
 
 3. **Pick the layout from the content** (don't ask):
    - **Comic strip / panels** — for sequential or process content (steps, cause→effect, how-something-works). Neila walks Pip through panel by panel.

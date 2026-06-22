@@ -47,7 +47,7 @@ This is the rubric Neila renders against. Step 4 of [SKILL.md](SKILL.md) must sa
 
 Each concept's analogy must appear as a **tiny concrete drawing**, not only words in a bubble. "Memory is like a desk" → draw the little desk with papers. The drawing is the point; the text labels it. A picture of words is not an illustrated explainer.
 
-## 7. Motion (when rendered as animation)
+## 7. Motion (optional — only add if the user asks for animation; static is the default and cheaper)
 
 - **Ease, don't lerp.** Add `keyTimes` + `keySplines` with `calcMode="spline"` for ease-in-out. Linear motion looks robotic.
   ```svg
@@ -74,7 +74,7 @@ Each concept's analogy must appear as a **tiny concrete drawing**, not only word
 4. Every speech tail points at its speaker; no bubble covers a face?
 5. Do eyes/bodies actually *act* — looking and leaning, Pip varied?
 6. Is each analogy *drawn*, not just written?
-7. (If animated) eased, staggered, seamless, ≤3 movers, calm not jittery — and does the resting frame look good frozen?
+7. Static by default — only animated if the user asked for motion; if animated, is it eased, staggered, seamless, ≤3 movers, calm not jittery, with a good-looking resting frame?
 8. role/title/desc present, all hex hardcoded, viewBox tight, no overlaps?
 
 If any answer is "no", fix it before calling `show_widget`. World-class is the default, not the upgrade.
