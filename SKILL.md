@@ -85,6 +85,7 @@ A picture is worth drawing once, not every time at full cost. Default to the che
    - Show the analogy as a tiny **drawing**, not just words.
    - Motion: eased (keySplines), staggered, seamless loops, ≤3 movers, calm — and the frozen frame must look composed too.
    - Neila hosts every picture; Pip appears and reacts in every picture; one guest per concept acts it out.
+   - **Before rendering, run the text-width and overlap checks from QUALITY.md §8 on every line and every element pair.** This is what catches text spilling past a card edge or an icon landing on top of a line — compute it, don't eyeball it.
 
 5. **Render + deliver.** See [Rendering](#rendering--works-in-claude-code-and-claudeai-chat) for the platform-specific step. Either way:
    - Give it a specific topic-based name (e.g. `photosynthesis_explained`) — the `show_widget` title, or the artifact's implied filename.

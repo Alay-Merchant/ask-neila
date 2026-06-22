@@ -60,7 +60,15 @@ Each concept's analogy must appear as a **tiny concrete drawing**, not only word
 - **Subtle and few.** Idle bob (2.5–3s), occasional blink, antenna sway, one prop emphasis. Cap ~3 moving things at once. No fast jitter, no flashing — it must read as alive, not anxious.
 - **The frozen frame must still be composed** — the downloaded still catches one moment, so no character should be mid-ugly-pose at rest. Design the resting state first, animate around it.
 
-## 8. Finish & accessibility
+## 8. Text fit and overlaps — compute these, don't eyeball them
+
+This is the most common failure mode (text spilling past a card edge, an icon sitting on top of a connector line). Fix it with arithmetic, not a glance:
+
+- **Text width check, every line, before drawing it:** `width ≈ char_count × font_size × 0.6`. The available width is `box_width − left_inset − right_padding` (subtract any badge/icon column too). If `width` > available, the line is too long — shorten it now, don't shrink the font or let it run past the edge. Re-check after any coordinate change; a moved box invalidates the old budget.
+- **Overlap check, every element pair that isn't deliberately layered:** note each shape's bounding box (`x, y, width, height` — for circles, `cx±r, cy±r`). Before finalizing, scan every pair of unrelated elements (icon vs. line, text vs. badge, card vs. card) and confirm their boxes don't intersect. The only allowed overlaps are intentional ones (a label centered in its own box, an arrowhead touching what it points to). If a guest icon or decoration would cross a connector line or another box, move it — shrink it, reposition it, or shorten the line.
+- Do this pass *after* you've placed everything but *before* calling render — fixing overlap on a finished mental layout is cheap; fixing it after the user reports a bug is not.
+
+## 9. Finish & accessibility
 
 - `role="img"` + meaningful `<title>` and `<desc>` (first children of `<svg>`).
 - These are physical-color scenes: **hardcode all hex** (don't mix in theme `c-*` classes) so nothing inverts oddly in dark mode.
@@ -68,13 +76,14 @@ Each concept's analogy must appear as a **tiny concrete drawing**, not only word
 
 ## Pre-flight checklist (run before finalizing EVERY render)
 
-1. Is there one clear focal point per panel, and do shot scales vary?
-2. One cohesive palette — every character readable against its background?
-3. Real font loaded; bubble text has bold-title / light-line hierarchy?
-4. Every speech tail points at its speaker; no bubble covers a face?
-5. Do eyes/bodies actually *act* — looking and leaning, Pip varied?
-6. Is each analogy *drawn*, not just written?
-7. Static by default — only animated if the user asked for motion; if animated, is it eased, staggered, seamless, ≤3 movers, calm not jittery, with a good-looking resting frame?
-8. role/title/desc present, all hex hardcoded, viewBox tight, no overlaps?
+1. **Did you run the text-width check on every line, and the overlap check on every element pair?** (§8 — this catches the most common bugs; do it before the rest of this list.)
+2. Is there one clear focal point per panel, and do shot scales vary?
+3. One cohesive palette — every character readable against its background?
+4. Real font loaded; bubble text has bold-title / light-line hierarchy?
+5. Every speech tail points at its speaker; no bubble covers a face?
+6. Do eyes/bodies actually *act* — looking and leaning, Pip varied?
+7. Is each analogy *drawn*, not just written?
+8. Static by default — only animated if the user asked for motion; if animated, is it eased, staggered, seamless, ≤3 movers, calm not jittery, with a good-looking resting frame?
+9. role/title/desc present, all hex hardcoded, viewBox tight?
 
 If any answer is "no", fix it before calling `show_widget`. World-class is the default, not the upgrade.
