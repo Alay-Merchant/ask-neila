@@ -32,7 +32,16 @@ Same fact. One a 10-year-old repeats at dinner; the other they skip. Then it's d
 
 **Inputs:** text, `.md`, `.txt`, `.csv`, `.pdf` (incl. scanned), `.pptx`, `.xlsx`/`.xls`, and images (`.png/.jpg/.jpeg/.webp/.gif` — diagrams, handwritten notes, screenshots, photographed pages).
 
-**Two outputs:** the **picture** (for humans) and an optional **markdown twin** (for AIs). The `.md` carries the same simplified concepts in a clean structured format, so another model can ingest the explanation as easily as you can read the comic.
+**Outputs:** the **picture** (for humans), an optional **markdown twin** (for AIs), and an optional **one-page cheat-sheet** (dense, exam-ready revision reference).
+
+## Tutor mode — Neila doesn't give up on you
+
+Neila isn't a one-shot. After the first explainer, just talk to her:
+
+- **"I don't get it"** → she **regenerates with a different approach** — a fresh analogy, a simpler level, smaller baby-steps, or a clearer redraw. Never the same words louder.
+- **Depth dial** → "explain like I'm 5 / a teenager / an expert." Same topic, re-pitched to your level.
+- **"Why?"** → pick a concept and she peels back a layer, staying concrete, as deep as you want to go.
+- **"Another analogy?"** → two more from different everyday domains (sport, cooking, money…) so one is bound to click.
 
 For each input, Neila:
 

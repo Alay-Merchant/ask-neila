@@ -1,6 +1,6 @@
 ---
 name: ask-neila
-description: "Turn any paragraph, file, PDF, PowerPoint, Excel sheet, or photo into an easy-to-understand colorful picture where alien characters explain the concepts — and optionally export the explanation as an AI-readable markdown file. Use when the user types /ask-neila, or asks to 'explain this simply', 'make this into a drawing', 'explain like I'm five with pictures', or wants a visual/illustrated explainer of some text, document, spreadsheet, or image."
+description: "Turn any paragraph, file, PDF, PowerPoint, Excel sheet, or photo into an easy-to-understand colorful picture where alien characters explain the concepts. Acts as a tutor: regenerate explanations a different way when the user is stuck, dial depth from kid to expert, answer 'why?' follow-ups, offer alternative analogies, and export an AI-readable markdown or a one-page cheat-sheet. Use when the user types /ask-neila, asks to 'explain this simply', 'make this into a drawing', 'explain like I'm five', 'I don't understand this', or wants a visual explainer of some text, document, spreadsheet, or image."
 ---
 
 # /ask-neila
@@ -19,7 +19,15 @@ The real value is the **simplification** (plain words + a concrete analogy per c
 /ask-neila path/to/photo.jpg             # explain a photo / image / screenshot
 /ask-neila path/to/notes.md              # explain a markdown/text file
 /ask-neila path/to/file.pdf --md         # also export an AI-readable .md
+/ask-neila path/to/file.pdf --cheatsheet # also make a dense one-page revision sheet
+/ask-neila <topic> --level expert        # depth dial: kid | teen | expert
 ```
+
+**After an explainer, just talk to Neila** (no flag needed):
+- "I don't get it" / "explain it again" → she **regenerates with a different approach**.
+- "explain it like I'm 5 / a teenager / an expert" → depth dial.
+- "why?" on a concept → she goes one layer deeper.
+- "give me another analogy" → two fresh ones from different domains.
 
 ## The cast (keep these CONSISTENT every time)
 
@@ -90,7 +98,30 @@ Reusable SVG groups for Neila and Pip live in [characters.md](characters.md) —
 
    Each concept's five bullets come straight from the six-beat method in [EXPLAIN.md](EXPLAIN.md), so the markdown and the picture say the same thing.
 
-7. **Offer to save the picture** (optional, ask): write the `.svg` into the user's Obsidian vault if they want to keep it.
+7. **Export a one-page cheat-sheet** (when `--cheatsheet` is passed, or offer it). Write `<topic>-cheatsheet.md` — the *dense* opposite of the explainer: a packed, exam-ready reference, not a gentle walkthrough. Structure: a one-line "what this is", a **key terms** table (term → tight definition), the core concepts as terse bullets, must-know **facts/formulas**, **common mistakes**, and a single "remember this" takeaway. Offer to render it as a Neila-styled visual one-pager (color-coded boxes, printable) if they want.
+
+8. **Offer to save the picture** (optional, ask): write the `.svg` into the user's Obsidian vault if they want to keep it.
+
+## Tutor mode (after the first explainer — Neila is a teacher, not a one-shot)
+
+Once an explainer exists, the user can keep working with Neila conversationally. Each of these reuses the [EXPLAIN.md](EXPLAIN.md) method.
+
+- **"I don't get it" / regenerate.** Do NOT reprint the same words louder — **change strategy**. First, if useful, ask what's confusing (which concept, or all of it). Then pick a *different* tactic and try again:
+  1. Swap to a completely fresh analogy from another everyday domain.
+  2. Drop the depth one level (toward kid).
+  3. Break the sticky concept into 2–3 smaller baby-steps (more panels, one idea each).
+  4. Redraw the picture clearer — a different guest who embodies it better, a bigger focal point, fewer things per panel.
+  5. Slow down to one concept at a time instead of all at once.
+  Regenerate can target just the explanation, just the picture, or both. Every retry must *visibly change approach* — if it didn't land, doing the same thing again won't help.
+
+- **Depth dial** (`--level kid|teen|expert`, or "explain like I'm…"). Same topic, re-pitched:
+  - **kid** — the default ELI5 bar in EXPLAIN.md.
+  - **teen** — real terms allowed but defined on first use; one step more abstract; assumes basic school knowledge.
+  - **expert** — precise vocabulary, assumes background, skips the basics — but keeps the clarity and structure. Expert ≠ jargon soup.
+
+- **Ask "why?"** — the user names a concept; Neila peels back one layer and stays concrete. Chainable, like a curious kid's why-chain, until they hit bedrock ("…and that's just how the universe is").
+
+- **Alternative analogies** — "that didn't click?" → offer **two** more analogies for the same concept, each from a *different* domain (e.g. sport, cooking, money, video games), so at least one connects. Note where each breaks if it matters.
 
 ## Before drawing, read the visualize guide
 
