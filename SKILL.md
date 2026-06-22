@@ -1,25 +1,37 @@
 ---
 name: ask-neila
-description: "Turn any paragraph, file, PDF, PowerPoint, Excel sheet, or photo into an easy-to-understand colorful picture where alien characters explain the concepts. Acts as a tutor: regenerate explanations a different way when the user is stuck, dial depth from kid to expert, answer 'why?' follow-ups, offer alternative analogies, and export an AI-readable markdown or a one-page cheat-sheet. Use when the user types /ask-neila, asks to 'explain this simply', 'make this into a drawing', 'explain like I'm five', 'I don't understand this', or wants a visual explainer of some text, document, spreadsheet, or image."
+description: "Read a file — PDF, PowerPoint, Excel, image/photo, or text — or a whole folder of files, and explain it as an easy-to-understand colorful picture where alien characters break the concepts down. For a folder, Neila maps how the files connect and explains the through-line. Acts as a tutor: regenerate a different way when the user is stuck, dial depth from kid to expert, answer 'why?' follow-ups, offer alternative analogies, and export AI-readable markdown or a one-page cheat-sheet. Use when the user types /ask-neila, points at a file or folder to explain, asks to 'explain this simply', 'make this into a drawing', 'explain like I'm five', 'I don't understand this', or wants the files in a folder connected and explained."
 ---
 
 # /ask-neila
 
-Turn any input — a pasted paragraph, or a `.txt/.md/.pdf/.pptx/.xlsx/.csv` file, or a **photo/image** — into a single colorful picture where friendly alien characters explain the hard concepts in dead-simple language. The user downloads the picture, and can also export the explanation as an **AI-readable markdown file** so other models can consume the simplified concepts too.
+**Point Neila at a file (or a whole folder) and she explains it.** She reads `.txt/.md/.pdf/.pptx/.xlsx/.csv` files and **photos/images**, then turns the hard concepts into a single colorful picture where friendly alien characters explain them in dead-simple language. Pasted text works too, but **reading files is the main job.**
+
+Give her a **folder of files** and she goes further: she builds a little map in her head of how the files connect — shared ideas, what builds on what — and explains the whole thing *and* how the pieces fit together.
+
+The user downloads the picture, and can also export the explanation as an **AI-readable markdown file** so other models can consume the simplified concepts too.
 
 The real value is the **simplification** (plain words + a concrete analogy per concept). The aliens are the wrapper that makes it stick.
 
 ## Usage
 
 ```
-/ask-neila <paste a paragraph here>      # explain pasted text
+# Main job — read a file:
 /ask-neila path/to/file.pdf              # explain a PDF (incl. scanned)
 /ask-neila path/to/slides.pptx           # explain a PowerPoint
 /ask-neila path/to/data.xlsx             # explain a spreadsheet (or .csv)
 /ask-neila path/to/photo.jpg             # explain a photo / image / screenshot
 /ask-neila path/to/notes.md              # explain a markdown/text file
+
+# Folder — connect the dots across many files:
+/ask-neila path/to/folder/               # read every file, map how they connect, explain the whole
+
+# Also works on pasted text:
+/ask-neila <paste a paragraph here>
+
+# Add-ons:
 /ask-neila path/to/file.pdf --md         # also export an AI-readable .md
-/ask-neila path/to/file.pdf --cheatsheet # also make a dense one-page revision sheet
+/ask-neila path/to/folder/ --cheatsheet  # also make a dense one-page revision sheet
 /ask-neila <topic> --level expert        # depth dial: kid | teen | expert
 ```
 
@@ -41,7 +53,7 @@ Reusable SVG groups for Neila and Pip live in [characters.md](characters.md) —
 
 ## Process
 
-1. **Get the content.**
+1. **Get the content.** If the path is a **folder**, jump to the [Folder mode](#folder-mode--connect-the-dots-across-files) section below. For a single file or pasted text:
    - Pasted paragraph → use as-is.
    - `.txt` / `.md` / `.csv` → read it directly.
    - `.pdf` → use the `anthropic-skills:pdf` skill to extract text (it OCRs scanned PDFs too).
@@ -101,6 +113,22 @@ Reusable SVG groups for Neila and Pip live in [characters.md](characters.md) —
 7. **Export a one-page cheat-sheet** (when `--cheatsheet` is passed, or offer it). Write `<topic>-cheatsheet.md` — the *dense* opposite of the explainer: a packed, exam-ready reference, not a gentle walkthrough. Structure: a one-line "what this is", a **key terms** table (term → tight definition), the core concepts as terse bullets, must-know **facts/formulas**, **common mistakes**, and a single "remember this" takeaway. Offer to render it as a Neila-styled visual one-pager (color-coded boxes, printable) if they want.
 
 8. **Offer to save the picture** (optional, ask): write the `.svg` into the user's Obsidian vault if they want to keep it.
+
+## Folder mode — connect the dots across files
+
+When the user points Neila at a **folder**, she doesn't just explain each file in isolation — she works out how they fit together and explains the *whole*.
+
+1. **Read every supported file** in the folder (same readers as step 1: pdf, pptx, xlsx, images, text). Skip unsupported files and say which you skipped.
+
+2. **Build the connection map.** Choose by size:
+   - **A handful of files (≲ ~8):** do it in-context. For each file, pull its main idea(s); then find the links — shared concepts, what builds on what, cause→effect across files, agreements and contradictions. You're looking for the *through-line*: what story do these files tell together?
+   - **A large folder, or the user wants a persistent/queryable graph:** delegate to the `graphify` skill (it's built exactly for this — folder → knowledge graph with clusters, hub concepts, and connection edges). Use its output as the map. Don't rebuild a graph engine. (`ask-neila: graphify does folder→graph; reuse it rather than reinventing clustering`)
+
+3. **Draw the concept map** as the picture. This is a connection diagram, not a comic: each **node** is a key idea (or a file), **edges** show how they link (labelled with the relationship — "leads to", "is an example of", "contradicts"). Neila stands beside the map presenting it; guest aliens sit at the important hub nodes. Read the `diagram` module via `mcp__visualize__read_me` for this layout, and still hold to [QUALITY.md](QUALITY.md). Keep it legible — cluster related nodes, don't draw a hairball.
+
+4. **Explain the through-line, simply.** Lead with the big picture in one or two plain sentences ("These five files are all about how a plant turns sunlight into food — each one covers a different step"). Then walk the map: each cluster/hub gets the EXPLAIN.md treatment, and call out the *links* explicitly ("this is why file 2 matters — it feeds into file 4"). The point of folder mode is the connections, so make them the star.
+
+5. **Exports** work the same: `--md` writes the map + explanations as structured markdown; `--cheatsheet` condenses the whole folder to one page.
 
 ## Tutor mode (after the first explainer — Neila is a teacher, not a one-shot)
 

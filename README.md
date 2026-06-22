@@ -1,8 +1,8 @@
 # 🛸 ask-neila
 
-> Turn any paragraph, document, spreadsheet, or photo into a colorful illustrated explainer — where friendly alien characters break down the hard concepts in dead-simple language. Export the explanation as markdown so other AIs understand it too.
+> Point it at a file — or a whole folder — and friendly alien characters explain it in dead-simple language as a colorful illustrated picture. Hand Neila a folder and she maps how the files connect and explains the whole story.
 
-**ask-neila** is a [Claude Code](https://claude.com/claude-code) skill. Point it at some text and it pulls out the few ideas that actually matter, rewrites each in plain words with a concrete analogy, and draws a single picture you can download — starring **Neila** the alien and her alien dog **Pip**, plus a cast of 100+ topic-themed guests.
+**ask-neila** is a [Claude Code](https://claude.com/claude-code) skill. **Its main job is reading your files** — PDFs, slides, spreadsheets, photos, notes — pulling out the few ideas that actually matter, rewriting each in plain words with a concrete analogy, and drawing a single picture you can download. Starring **Neila** the alien and her alien dog **Pip**, plus a cast of 100+ topic-themed guests. Pasted text works too, but files are the point.
 
 The real value is the *simplification*. Neila is built on a strict pedagogy method ([EXPLAIN.md](EXPLAIN.md)) that turns expert jargon into something a 10-year-old explains back to a friend. The aliens are the wrapper that makes it stick.
 
@@ -27,10 +27,13 @@ Same fact. One a 10-year-old repeats at dinner; the other they skip. Then it's d
 /ask-neila path/to/data.xlsx             # explain a spreadsheet (or .csv)
 /ask-neila path/to/whiteboard.jpg        # explain a photo / screenshot / notes
 /ask-neila path/to/notes.md              # explain a markdown/text file
+/ask-neila path/to/folder/               # read a whole folder & connect the dots
 /ask-neila path/to/lecture.pdf --md      # also export an AI-readable .md
 ```
 
-**Inputs:** text, `.md`, `.txt`, `.csv`, `.pdf` (incl. scanned), `.pptx`, `.xlsx`/`.xls`, and images (`.png/.jpg/.jpeg/.webp/.gif` — diagrams, handwritten notes, screenshots, photographed pages).
+**Inputs:** single files or a **whole folder** — text, `.md`, `.txt`, `.csv`, `.pdf` (incl. scanned), `.pptx`, `.xlsx`/`.xls`, and images (`.png/.jpg/.jpeg/.webp/.gif` — diagrams, handwritten notes, screenshots, photographed pages).
+
+**Folder mode:** hand Neila a folder and she reads every file, builds a **map of how they connect** (shared ideas, what builds on what, contradictions), draws that map, and explains the *through-line* — the story the files tell together. For big folders she leans on the `graphify` skill rather than reinventing the graph.
 
 **Outputs:** the **picture** (for humans), an optional **markdown twin** (for AIs), and an optional **one-page cheat-sheet** (dense, exam-ready revision reference).
 
