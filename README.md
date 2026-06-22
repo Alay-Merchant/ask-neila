@@ -1,6 +1,6 @@
 # 🛸 ask-neila
 
-> Turn any paragraph, file, PDF, or PowerPoint into a colorful illustrated explainer — where friendly alien characters break down the hard concepts in dead-simple language.
+> Turn any paragraph, document, spreadsheet, or photo into a colorful illustrated explainer — where friendly alien characters break down the hard concepts in dead-simple language. Export the explanation as markdown so other AIs understand it too.
 
 **ask-neila** is a [Claude Code](https://claude.com/claude-code) skill. Point it at some text and it pulls out the few ideas that actually matter, rewrites each in plain words with a concrete analogy, and draws a single picture you can download — starring **Neila** the alien and her alien dog **Pip**, plus a cast of 100+ topic-themed guests.
 
@@ -22,10 +22,17 @@ Same fact. One a 10-year-old repeats at dinner; the other they skip. Then it's d
 
 ```
 /ask-neila <paste a paragraph here>      # explain pasted text
-/ask-neila path/to/lecture.pdf           # explain a PDF
+/ask-neila path/to/lecture.pdf           # explain a PDF (scanned too)
 /ask-neila path/to/slides.pptx           # explain a PowerPoint
+/ask-neila path/to/data.xlsx             # explain a spreadsheet (or .csv)
+/ask-neila path/to/whiteboard.jpg        # explain a photo / screenshot / notes
 /ask-neila path/to/notes.md              # explain a markdown/text file
+/ask-neila path/to/lecture.pdf --md      # also export an AI-readable .md
 ```
+
+**Inputs:** text, `.md`, `.txt`, `.csv`, `.pdf` (incl. scanned), `.pptx`, `.xlsx`/`.xls`, and images (`.png/.jpg/.jpeg/.webp/.gif` — diagrams, handwritten notes, screenshots, photographed pages).
+
+**Two outputs:** the **picture** (for humans) and an optional **markdown twin** (for AIs). The `.md` carries the same simplified concepts in a clean structured format, so another model can ingest the explanation as easily as you can read the comic.
 
 For each input, Neila:
 
