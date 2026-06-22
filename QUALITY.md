@@ -1,0 +1,80 @@
+# Quality bar — make every picture world-class
+
+This is the rubric Neila renders against. Step 4 of [SKILL.md](SKILL.md) must satisfy all of it. The difference between a clip-art doodle and a world-class explainer is here. Read it before drawing; run the pre-flight checklist before finalizing.
+
+## 1. Composition
+
+- **One focal point per panel.** The eye should land somewhere first. Size, color, or position the key thing to win attention.
+- **Vary shot scale across panels:** an establishing wide shot, then medium, then a close-up for the punchline. Don't draw every panel at the same zoom — that's the #1 amateur tell.
+- **Rule of thirds.** Place characters and key objects off-center, near the third-lines, not dead-center every time.
+- **Reading order is unambiguous:** left→right, top→bottom. Panels are clearly separated by gutters (even white space, ~16–24px). Number panels if order could be missed.
+- **Breathing room.** Don't fill every pixel. Negative space makes the focal point pop.
+
+## 2. Color
+
+- **One cohesive palette per picture**, not a rainbow. Choose a background family + 2–3 character hues that harmonize. Pull from the [cast.md](cast.md) palette.
+- **Per-panel background tints shift subtly** to signal progression (e.g. warm → cool as a process completes). Backgrounds are flat, never gradients.
+- Characters pop against their background — never a teal alien on a teal panel. Check contrast.
+- Reserve a single accent (the `#FFD23F` yellow or `#FF8FB1` pink) for the thing you want noticed.
+
+## 3. Typography
+
+- Load a real rounded display font, don't rely on Comic Sans fallback. Put this at the top of the SVG:
+  ```svg
+  <style>@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&amp;display=swap');
+  .ttl{font-family:'Fredoka','Comic Sans MS',sans-serif;font-weight:600}
+  .bdy{font-family:'Fredoka','Comic Sans MS',sans-serif;font-weight:400}</style>
+  ```
+  (`fonts.googleapis.com` is allowlisted by the widget.) Use `class="ttl"` / `class="bdy"`.
+- **Hierarchy in every bubble:** concept NAME bold and larger (~17px) on top, the plain one-liner lighter (~14px) below. Never one undifferentiated block.
+- Sentence case. Never below 13px. Generous line spacing (`dy` ≥ 1.3em). Left-align body text in wide bubbles; center short labels.
+
+## 4. Speech & thought bubbles
+
+- **Tail points at the speaker's mouth.** A bubble whose tail points nowhere reads as broken.
+- Speech = bubble with a triangular tail. Thinking = cloud outline with small trailing circles. Use the right one.
+- **Bubbles never cover faces** — neither the speaker's nor anyone they're talking to. Route them into empty space.
+- Bubble has padding: text inset ≥12px from the bubble edge on all sides.
+
+## 5. Acting (the characters must perform)
+
+- **Eyes look at what they reference.** If Neila points at a diagram, her eyes track that way too. Dead-ahead eyes in every panel = lifeless.
+- **Bodies lean and gesture.** Lean toward what excites them, back from what surprises them. Arms point, present, shrug.
+- **Pip reacts differently each panel** — happy, confused, amazed, sleepy. He's the audience's emotional mirror; recycling one pose wastes him.
+- Guest aliens *physically embody* their concept (a stretchy alien stretches; a split alien is mid-split), not just stand holding a prop.
+
+## 6. Show the analogy, don't just write it
+
+Each concept's analogy must appear as a **tiny concrete drawing**, not only words in a bubble. "Memory is like a desk" → draw the little desk with papers. The drawing is the point; the text labels it. A picture of words is not an illustrated explainer.
+
+## 7. Motion (when rendered as animation)
+
+- **Ease, don't lerp.** Add `keyTimes` + `keySplines` with `calcMode="spline"` for ease-in-out. Linear motion looks robotic.
+  ```svg
+  <animateTransform attributeName="transform" type="translate" values="0 0;0 -4;0 0"
+    keyTimes="0;0.5;1" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1"
+    dur="2.6s" repeatCount="indefinite"/>
+  ```
+- **Stagger** start times (`begin="0.3s"`, `0.6s`…) so things don't pulse in unison.
+- **Seamless loops:** first and last `values` must match, or it jumps.
+- **Subtle and few.** Idle bob (2.5–3s), occasional blink, antenna sway, one prop emphasis. Cap ~3 moving things at once. No fast jitter, no flashing — it must read as alive, not anxious.
+- **The frozen frame must still be composed** — the downloaded still catches one moment, so no character should be mid-ugly-pose at rest. Design the resting state first, animate around it.
+
+## 8. Finish & accessibility
+
+- `role="img"` + meaningful `<title>` and `<desc>` (first children of `<svg>`).
+- These are physical-color scenes: **hardcode all hex** (don't mix in theme `c-*` classes) so nothing inverts oddly in dark mode.
+- Tight viewBox (content bottom + ~24px). No element off-canvas, no unintended overlaps, thick consistent outlines (4px on bodies, 2–3px on details).
+
+## Pre-flight checklist (run before finalizing EVERY render)
+
+1. Is there one clear focal point per panel, and do shot scales vary?
+2. One cohesive palette — every character readable against its background?
+3. Real font loaded; bubble text has bold-title / light-line hierarchy?
+4. Every speech tail points at its speaker; no bubble covers a face?
+5. Do eyes/bodies actually *act* — looking and leaning, Pip varied?
+6. Is each analogy *drawn*, not just written?
+7. (If animated) eased, staggered, seamless, ≤3 movers, calm not jittery — and does the resting frame look good frozen?
+8. role/title/desc present, all hex hardcoded, viewBox tight, no overlaps?
+
+If any answer is "no", fix it before calling `show_widget`. World-class is the default, not the upgrade.
