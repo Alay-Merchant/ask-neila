@@ -1,5 +1,8 @@
 # 🛸 ask-neila
 
+[![License: MIT](https://img.shields.io/badge/license-MIT-3FBFB0)](LICENSE)
+[![Claude Code skill](https://img.shields.io/badge/Claude%20Code-skill-FFD23F)](https://claude.com/claude-code)
+
 > Point it at a file — or a whole folder — and friendly alien characters explain it in dead-simple language as a colorful illustrated picture. Hand Neila a folder and she maps how the files connect and explains the whole story.
 
 <p align="center">
@@ -23,6 +26,19 @@ The real value is the *simplification*. Neila is built on a strict pedagogy meth
 > 🛸 **Neila:** "You know how a snowball gets bigger as it rolls down a hill — and the bigger it gets, the *faster* it grows? Money can do that. The bank pays you a little extra just for keeping your money there (that's **interest**). The clever bit: next year you earn extra on the extra too, so the pile grows itself. Give it enough time and a small sum snowballs into a fortune — £100 can quietly become over £1,000. That's why people say the best time to start saving was years ago."
 
 Same fact. One a 10-year-old repeats at dinner; the other they skip. Then it's drawn — exactly the picture above.
+
+## More demos
+
+**Folder mode** — hand it a whole folder, Neila finds the through-line:
+
+<p align="center">
+  <img src="assets/demo-folder.svg" alt="Neila reads lecture.pdf, slides.pptx, and notes.md and explains how they all build toward one exam answer" width="600">
+</p>
+
+**Tutor mode** — "I don't get it" gets a different explanation, not a louder one:
+
+> 🧑 "I still don't get the snowball thing."
+> 🛸 **Neila:** "Okay, sports version: it's like a winning streak. Win once, you're slightly more confident — that confidence helps you win again, which builds *even more* confidence. Money does that with itself: last year's gains start earning their own gains. No hill required."
 
 ## What it does
 

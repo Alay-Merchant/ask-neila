@@ -1,0 +1,67 @@
+<svg width="680" height="420" viewBox="0 0 680 420" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Neila maps a folder of revision files</title>
+<desc>Three files — lecture.pdf, slides.pptx, notes.md — connected by Neila into one through-line: they all build toward the exam topic of supply and demand.</desc>
+<defs>
+<marker id="fah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+<style>@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&amp;display=swap');</style>
+</defs>
+
+<rect x="0" y="0" width="680" height="420" fill="#EAF2F8"/>
+<text x="34" y="46" font-family="'Fredoka','Comic Sans MS',sans-serif" font-size="26" font-weight="600" fill="#16324A">Folder mode: what's the through-line?</text>
+<text x="34" y="72" font-family="'Fredoka','Comic Sans MS',sans-serif" font-size="13.5" font-weight="400" fill="#3E6080">/ask-neila Econ101/  → reads every file, maps how they connect</text>
+
+<!-- file 1 -->
+<g transform="translate(60,120)">
+  <rect x="0" y="0" width="120" height="84" rx="10" fill="#FFFFFF" stroke="#16324A" stroke-width="2.5"/>
+  <rect x="14" y="14" width="92" height="8" rx="3" fill="#D7E3EE"/>
+  <rect x="14" y="30" width="92" height="8" rx="3" fill="#D7E3EE"/>
+  <rect x="14" y="46" width="60" height="8" rx="3" fill="#D7E3EE"/>
+  <text x="60" y="-8" font-family="'Fredoka','Comic Sans MS',sans-serif" font-size="13" font-weight="500" fill="#16324A" text-anchor="middle">lecture.pdf</text>
+</g>
+
+<!-- file 2 -->
+<g transform="translate(60,250)">
+  <rect x="0" y="0" width="120" height="84" rx="10" fill="#FFFFFF" stroke="#16324A" stroke-width="2.5"/>
+  <rect x="14" y="14" width="92" height="8" rx="3" fill="#FCE3C2"/>
+  <rect x="14" y="30" width="70" height="8" rx="3" fill="#FCE3C2"/>
+  <rect x="14" y="46" width="92" height="8" rx="3" fill="#FCE3C2"/>
+  <text x="60" y="-8" font-family="'Fredoka','Comic Sans MS',sans-serif" font-size="13" font-weight="500" fill="#16324A" text-anchor="middle">slides.pptx</text>
+</g>
+
+<!-- file 3 -->
+<g transform="translate(60,328)">
+  <rect x="190" y="0" width="120" height="84" rx="10" fill="#FFFFFF" stroke="#16324A" stroke-width="2.5"/>
+  <rect x="204" y="14" width="92" height="8" rx="3" fill="#D7F0DE"/>
+  <rect x="204" y="30" width="50" height="8" rx="3" fill="#D7F0DE"/>
+  <text x="250" y="-8" font-family="'Fredoka','Comic Sans MS',sans-serif" font-size="13" font-weight="500" fill="#16324A" text-anchor="middle">notes.md</text>
+</g>
+
+<!-- connecting lines into Neila -->
+<path d="M180 160 Q300 150 420 200" fill="none" stroke="#2E7DA6" stroke-width="2.5" marker-end="url(#fah)"/>
+<path d="M180 292 Q300 250 420 220" fill="none" stroke="#2E7DA6" stroke-width="2.5" marker-end="url(#fah)"/>
+<path d="M310 332 Q360 290 420 240" fill="none" stroke="#2E7DA6" stroke-width="2.5" marker-end="url(#fah)"/>
+
+<!-- Neila -->
+<g transform="translate(420,150) scale(0.95)">
+  <line x1="48" y1="20" x2="40" y2="2" stroke="#2A8C80" stroke-width="5" stroke-linecap="round"/>
+  <line x1="72" y1="20" x2="80" y2="2" stroke="#2A8C80" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="38" cy="0" r="6" fill="#FFD23F"/>
+  <circle cx="82" cy="0" r="6" fill="#FFD23F"/>
+  <ellipse cx="60" cy="75" rx="52" ry="58" fill="#3FBFB0" stroke="#2A8C80" stroke-width="4"/>
+  <circle cx="38" cy="62" r="11" fill="#fff" stroke="#2A8C80" stroke-width="3"/>
+  <circle cx="60" cy="58" r="11" fill="#fff" stroke="#2A8C80" stroke-width="3"/>
+  <circle cx="82" cy="62" r="11" fill="#fff" stroke="#2A8C80" stroke-width="3"/>
+  <circle cx="35" cy="65" r="4.5" fill="#1A1A2E"/>
+  <circle cx="57" cy="61" r="4.5" fill="#1A1A2E"/>
+  <circle cx="79" cy="65" r="4.5" fill="#1A1A2E"/>
+  <path d="M44 92 Q60 108 76 92" stroke="#1A1A2E" stroke-width="4" fill="none" stroke-linecap="round"/>
+</g>
+
+<rect x="420" y="290" width="226" height="100" rx="14" fill="#FFFFFF" stroke="#16324A" stroke-width="2.5"/>
+<text x="436" y="316" font-family="'Fredoka','Comic Sans MS',sans-serif" font-size="14" font-weight="600" fill="#16324A">"All three build toward</text>
+<text x="436" y="338" font-family="'Fredoka','Comic Sans MS',sans-serif" font-size="14" font-weight="600" fill="#16324A">one idea: when supply</text>
+<text x="436" y="360" font-family="'Fredoka','Comic Sans MS',sans-serif" font-size="14" font-weight="600" fill="#16324A">rises, price falls —</text>
+<text x="436" y="382" font-family="'Fredoka','Comic Sans MS',sans-serif" font-size="14" font-weight="600" fill="#16324A">that's the exam answer."</text>
+
+<rect x="30" y="396" width="620" height="0" fill="none"/>
+</svg>
