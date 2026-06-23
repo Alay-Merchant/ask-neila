@@ -61,6 +61,13 @@ A picture is worth drawing once, not every time at full cost. Default to the che
 - **No filler decoration** (floating coins, sparkles, background clutter) unless it's load-bearing for the concept.
 - **Don't re-read** [characters.md](characters.md), [cast.md](cast.md), [EXPLAIN.md](EXPLAIN.md), [QUALITY.md](QUALITY.md), or call `mcp__visualize__read_me` again if you already loaded them earlier in this same conversation — reuse what you remember.
 
+**Speed, not just tokens.** A picture's wall-clock time is dominated by sequential round-trips and how much SVG markup gets typed out — both are fixable:
+
+- **Read guide files in parallel, not one at a time.** On a cold call, [characters.md](characters.md), [cast.md](cast.md), [EXPLAIN.md](EXPLAIN.md), and [QUALITY.md](QUALITY.md) are independent — fire all the `Read` calls in the same turn instead of waiting for each to finish before starting the next.
+- **Skip `mcp__visualize__read_me` entirely for a simple static card/poster.** [QUALITY.md](QUALITY.md) is self-contained (hardcoded hex, no host CSS variables needed) for plain SVG art. Only call `read_me` when you actually need the `diagram` module (folder-mode concept maps) — it adds a round-trip for guidance the simple case doesn't use.
+- **Scale concepts to the ask, not a fixed default.** A single quick question ("explain X") often only needs 1–2 concepts and one small card — don't default to a 3–4-card poster just because that's the cap. Save the bigger layout for when the source material actually has several distinct ideas worth separating.
+- **One `show_widget` call, not a draft-then-redraw loop.** Run the text-fit and overlap checks (QUALITY.md §8) on your own layout math *before* writing the SVG, so the first render is the final one.
+
 ## Process
 
 1. **Get the content.** If the path is a **folder**, jump to the [Folder mode](#folder-mode--connect-the-dots-across-files) section below. For a single file or pasted text:
@@ -166,7 +173,7 @@ Once an explainer exists, the user can keep working with Neila conversationally.
 
 This skill runs the same everywhere; only the render step differs by platform:
 
-- **Claude Code (this CLI):** call `mcp__visualize__read_me` with `modules: ["art"]` (and `["diagram"]` for comic panels) **once** before your first `show_widget` call, then deliver via `mcp__visualize__show_widget`. Don't narrate the `read_me` call.
+- **Claude Code (this CLI):** deliver via `mcp__visualize__show_widget`. Call `mcp__visualize__read_me` first only if you need it — see [Keep it cheap](#keep-it-cheap): skip it for a simple static card/poster ([QUALITY.md](QUALITY.md) already covers that case), call it with `modules: ["diagram"]` for folder-mode concept maps. At most once per conversation either way. Don't narrate the `read_me` call.
 - **claude.ai chat, Desktop, or anywhere without those tools:** skip `read_me`/`show_widget` entirely — just output the finished SVG as a fenced ` ```svg ` code block in your reply. claude.ai turns this into a viewable, downloadable Artifact automatically. [QUALITY.md](QUALITY.md) and [characters.md](characters.md)/[cast.md](cast.md) are self-contained (hardcoded hex, no host CSS variables needed), so the picture looks identical either way.
 - **File reading & folder mode:** use whichever file-ingestion the platform gives you — Claude Code's named skills (`pdf`/`pptx`/`xlsx`) if present, or just read an attached/uploaded file directly if the platform already extracted it into context (claude.ai does this automatically for PDF/DOCX/PPTX/XLSX/images on upload). The `graphify` skill (folder mode's big-folder path) is Claude Code-only — if it's not available, just use the in-context connection-map method regardless of folder size.
 
