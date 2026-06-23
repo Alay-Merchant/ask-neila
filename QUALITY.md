@@ -62,10 +62,11 @@ Each concept's analogy must appear as a **tiny concrete drawing**, not only word
 
 ## 8. Text fit and overlaps — compute these, don't eyeball them
 
-This is the most common failure mode (text spilling past a card edge, an icon sitting on top of a connector line). Fix it with arithmetic, not a glance:
+This is the most common failure mode (text spilling past a card edge, an icon sitting on top of a connector line, a label crossing another box) and the #1 thing that makes a render look unprofessional. Fix it with arithmetic, not a glance — **mandatory, not optional, on every render:**
 
 - **Text width check, every line, before drawing it:** `width ≈ char_count × font_size × 0.6`. The available width is `box_width − left_inset − right_padding` (subtract any badge/icon column too). If `width` > available, the line is too long — shorten it now, don't shrink the font or let it run past the edge. Re-check after any coordinate change; a moved box invalidates the old budget.
-- **Overlap check, every element pair that isn't deliberately layered:** note each shape's bounding box (`x, y, width, height` — for circles, `cx±r, cy±r`). Before finalizing, scan every pair of unrelated elements (icon vs. line, text vs. badge, card vs. card) and confirm their boxes don't intersect. The only allowed overlaps are intentional ones (a label centered in its own box, an arrowhead touching what it points to). If a guest icon or decoration would cross a connector line or another box, move it — shrink it, reposition it, or shorten the line.
+- **Build a bounding-box list before you write the final SVG.** For every element that isn't text-on-a-line (every card, panel, character, guest, icon, bubble, decoration, and connector line/path), write down its **absolute** bounding box `(x_min, y_min, x_max, y_max)` — resolve any `transform="translate(...)"` / `scale(...)` into the final coordinates first; a box's local coordinates aren't the box's real position. For circles/ellipses use `cx±r, cy±r`. For a connector line/path, use the bounding box of its full stroke path, not just its endpoints.
+- **Check every pair.** With that list, check every pair of elements that aren't deliberately layered (icon vs. connector line, text vs. badge, card vs. card, guest vs. neighboring card) for intersection. The only allowed overlaps are intentional ones: a label centered inside its own box, or an arrowhead/line-end touching the exact element it points to or originates from — touching, not cutting across or sitting inside the unrelated box. If anything else intersects, move it: shrink it, reposition it, reroute the line with a wider curve, or add a gutter. Re-run the check after every coordinate change.
 - Do this pass *after* you've placed everything but *before* calling render — fixing overlap on a finished mental layout is cheap; fixing it after the user reports a bug is not.
 
 ## 9. Finish & accessibility
@@ -76,7 +77,7 @@ This is the most common failure mode (text spilling past a card edge, an icon si
 
 ## Pre-flight checklist (run before finalizing EVERY render)
 
-1. **Did you run the text-width check on every line, and the overlap check on every element pair?** (§8 — this catches the most common bugs; do it before the rest of this list.)
+1. **Did you write down absolute bounding boxes for every element and check every pair for intersection, plus the text-width check on every line?** (§8 — this catches the most common bugs; do it before the rest of this list, and do NOT call `show_widget` until this passes.)
 2. Is there one clear focal point per panel, and do shot scales vary?
 3. One cohesive palette — every character readable against its background?
 4. Real font loaded; bubble text has bold-title / light-line hierarchy?
